@@ -1,0 +1,7 @@
+#!/usr/bin/make -f
+
+export DH_GOLANG_EXCLUDES := _benchmark/cmark/.gitignore
+export DH_GOLANG_INSTALL_EXTRA := _benchmark _test extension/_test
+
+%:
+	dh $@ --builddirectory=_build --buildsystem=golang --with=golang

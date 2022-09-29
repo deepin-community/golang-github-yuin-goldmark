@@ -1,0 +1,40 @@
+Source: golang-github-yuin-goldmark
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Uploaders: Anthony Fok <foka@debian.org>
+Section: golang
+Testsuite: autopkgtest-pkg-go
+Priority: optional
+Build-Depends: debhelper-compat (= 13),
+               dh-golang
+Build-Depends-Indep: golang-any
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/go-team/packages/golang-github-yuin-goldmark
+Vcs-Git: https://salsa.debian.org/go-team/packages/golang-github-yuin-goldmark.git
+Homepage: https://github.com/yuin/goldmark
+Rules-Requires-Root: no
+XS-Go-Import-Path: github.com/yuin/goldmark
+
+Package: golang-github-yuin-goldmark-dev
+Architecture: all
+Multi-Arch: foreign
+Depends: ${misc:Depends}
+Description: CommonMark compliant and extensible Markdown parser written in Go
+ goldmark is a Markdown parser written in Go.  It is easy to extend,
+ standard compliant, and well structured.  It is compliant with CommonMark 0.29,
+ and supports extensions from GitHub Flavored Markdown and PHP Markdown Extra.
+ .
+ Features:
+ .
+  * Standard compliant.  goldmark gets full compliance with the latest
+    CommonMark spec.
+  * Extensible.  Do you want to add a @username mention syntax to Markdown?
+    You can easily do it in goldmark. You can add your AST nodes, parsers
+    for block level elements, parsers for inline level elements,
+    transformers for paragraphs, transformers for whole AST structure, and
+    renderers.
+  * Performance.  goldmark performs pretty much equally to cmark, the
+    CommonMark reference implementation written in C.
+  * Robust. goldmark is tested with go-fuzz, a fuzz testing tool.
+  * Builtin extensions.  goldmark ships with common extensions like tables,
+    strikethrough, task lists, and definition lists.
+  * Depends only on standard libraries.
